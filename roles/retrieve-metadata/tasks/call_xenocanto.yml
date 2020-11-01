@@ -1,0 +1,24 @@
+---
+
+   - name: Record the vars
+     set_fact: 
+         id: "{{ bird.bird_record.id }}"
+         Genre: "{{ bird.bird_record.Genre }}"
+         Espece: "{{ bird.bird_record.Espece }}"
+         frName: "{{ bird.bird_record.frName }}"
+         enName: "{{ bird.bird_record.enName }}"
+
+   - name: Verify that the bird is present in the file populate.sql
+     lineinfile:
+        path: "{{ sql_populate_file }}"
+        line: "MERGE INTO Bird KEY(id) VALUES ({{ id }}, '{{ Genre }}', '{{ Espece }}', '','{{ enName }}','{{ frName }}');"
+
+     
+   - include_tasks: call_xenocanto_claims.yml
+     with_items: 
+       - "{{ bird.bird_record.claims }}"
+     loop_control:
+       loop_var: claim
+
+
+

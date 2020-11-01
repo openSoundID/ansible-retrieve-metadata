@@ -1,0 +1,11 @@
+---
+
+   - name: get quality of the claim
+     set_fact:
+       cmd_xenocanto_download_metadata: "xeno-canto -m {{ Genre }} {{ Espece }} q:{{ q }} cnt:{{ cnt }}"
+     
+   - name: Download Xeno Canto Metadata  
+     shell: "{{ cmd_xenocanto_download_metadata }}"
+     args:
+       chdir: "{{ metadata_dir }}"
+ 

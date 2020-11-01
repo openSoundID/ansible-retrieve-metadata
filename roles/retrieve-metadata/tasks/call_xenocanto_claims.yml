@@ -1,0 +1,12 @@
+---
+
+   - name: get quality of the claim
+     set_fact: 
+         q: "{{ claim.claim_record.q }}"
+     
+   - include_tasks: call_xenocanto_cnt.yml 
+     with_items: 
+       - "{{ claim.claim_record.cnt }}"
+     loop_control:
+       loop_var: country
+

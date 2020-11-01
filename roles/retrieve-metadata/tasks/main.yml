@@ -1,0 +1,14 @@
+---
+
+- include_tasks: call_xenocanto.yml 
+  with_items: 
+        - "{{ birds_list }}"
+  loop_control:
+    loop_var: bird
+  
+
+
+ 
+
+
+

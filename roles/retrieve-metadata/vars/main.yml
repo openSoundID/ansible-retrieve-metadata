@@ -1,0 +1,10 @@
+---
+user: jerome
+group: jerome
+root_path: /home/jerome/balbucam4/Signature-2.0
+features_path: "{{ root_path }}/signatures"
+feature_directory: Features
+test_subdirectory: tests
+ansible_scripts_directory: /home/jerome/balbucam4/ansible
+L1_for_L2_training_subdirectory: MatchedWavFiles
+java_cmd: "/usr/lib/jvm/java-11-openjdk-11.0.1.13-11.rolling.fc29.x86_64/bin/java -Xmx4g -classpath \"lib/engine-1.0.0-SNAPSHOT.jar:lib/musicg.jar:properties:lib/FastRandomForest_2.0.jar\"" 

@@ -1,0 +1,8 @@
+---
+
+   - name: get country of the claim
+     set_fact:
+       cnt: "{{ country }}"
+
+     
+   - include_tasks: call_download_xenocanto.yml 
