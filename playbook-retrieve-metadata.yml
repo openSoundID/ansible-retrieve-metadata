@@ -4,9 +4,9 @@
 
   vars:
    
-   metadata_dir: "{{ lookup('ini', 'ansible.metadataRepository type=properties file={{ root_dir }}/properties/engine.properties') }}"
-   sql_populate_file: "{{ lookup('ini', 'ansible.populateSQLFile type=properties file={{ root_dir }}/properties/engine.properties') }}"
-   birds_list_path: "{{ lookup('ini', 'ansible.birds_list type=properties file={{ root_dir }}/properties/engine.properties') }}"
+   metadata_dir: "{{ lookup('ini', 'ansible.metadataRepository type=properties file={{ root_dir }}/properties/opensoundid.properties') }}"
+   sql_populate_file: "{{ lookup('ini', 'ansible.populateSQLFile type=properties file={{ root_dir }}/properties/opensoundid.properties') }}"
+   birds_list_path: "{{ lookup('ini', 'ansible.birds_list type=properties file={{ root_dir }}/properties/opensoundid.properties') }}"
 
   pre_tasks:
     - name: include birds_list
